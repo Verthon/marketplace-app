@@ -7,7 +7,7 @@ const Navbar = styled.nav`
   bottom: 0;
   width: 100%;
   padding: 1rem;
-`;
+`
 
 const NavItem = styled.span`
   display: flex;
@@ -19,7 +19,7 @@ const NavItem = styled.span`
     width: 20px;
     height: 20px;
   }
-`;
+`
 
 export const Styled = {
   Navbar,
