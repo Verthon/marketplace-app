@@ -16,6 +16,18 @@ module.exports = {
   rules: {
     'no-use-before-define': [0],
     '@typescript-eslint/no-use-before-define': [1],
-    'import/no-default-export': 'error'
+    'import/no-default-export': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          ['external', 'builtin'],
+          ['parent', 'internal'],
+          ['index', 'sibling']
+        ],
+        'newlines-between': 'always'
+      }
+    ],
+    '@typescript-eslint/no-explicit-any': 'error'
   }
 }
