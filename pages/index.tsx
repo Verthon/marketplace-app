@@ -1,9 +1,10 @@
+/* eslint-disable import/no-default-export */
 import React from 'react'
 import Head from 'next/head'
 
 import { Navbar } from '../components/Navbar/Navbar'
 
-export function Home () {
+function Home () {
   return (
     <div>
       <Head>
@@ -14,3 +15,5 @@ export function Home () {
     </div>
   )
 }
+
+export default Home
