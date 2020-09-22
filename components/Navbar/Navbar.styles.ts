@@ -7,6 +7,7 @@ const Navbar = styled.nav`
   bottom: 0;
   width: 100%;
   padding: 1rem 0;
+  background-color: #ffffff;
 `
 
 const NavItem = styled.span`

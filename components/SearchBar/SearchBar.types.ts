@@ -1,4 +1,8 @@
 export type Props = {
-  fake: boolean
+  fake?: boolean
   onSubmit: () => void
+}
+
+export type ContainerProps = {
+  fake?: boolean;
 }
