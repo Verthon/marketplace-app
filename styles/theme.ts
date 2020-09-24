@@ -1,4 +1,6 @@
-export const theme = {
+import { theme } from '@chakra-ui/core'
+
+export const customTheme = {
   breakpoints: ['30em', '48em', '62em', '80em'],
   fonts: {
     heading: '"Avenir Next", sans-serif',
@@ -16,5 +18,6 @@ export const theme = {
     '4xl': '2.25rem',
     '5xl': '3rem',
     '6xl': '4rem'
-  }
+  },
+  ...theme
 }
