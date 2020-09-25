@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 
 const Wrapper = styled.li`
   background-color: #FAFBF8;
-  height: 100vh;
 `
 
 const Content = styled.a`

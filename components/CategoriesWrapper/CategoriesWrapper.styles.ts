@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 const Section = styled.section`
   background-color: #ffffff;
-  height: 100vh;
+  margin: 1rem 0;
 `
 
 const Header = styled.header`
