@@ -3,8 +3,10 @@ import React from 'react'
 import { Global, css } from '@emotion/core'
 import { ColorModeProvider, CSSReset, ThemeProvider } from '@chakra-ui/core'
 
+import { customTheme } from '../styles/theme'
+
 const myApp = ({ Component, pageProps }) => (
-  <ThemeProvider>
+  <ThemeProvider theme={customTheme}>
     <ColorModeProvider value="light">
       <CSSReset />
       <Global
