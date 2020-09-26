@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 
+import { Theme } from '../../styles/theme'
+
 const Section = styled.section`
   background-color: #ffffff;
   margin: 1rem 0;
@@ -8,11 +10,12 @@ const Section = styled.section`
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 0 16px 24px;
+  align-items: center;
+  padding: 16px 24px;
 `
 
 const Title = styled.h2`
-color: #002F34;
+color: ${({ theme }: { theme: Theme }) => theme.colors.grey[900]};
 margin: 0;
 font-size: 20px;
 line-height: 22px;
@@ -27,10 +30,11 @@ const AllCategories = styled.a`
 margin: 0;
 font-size: 14px;
 line-height: 18px;
+cursor: pointer;
 `
 
 const ListWrapper = styled.div`
-    padding: 24px 16px 0;
+    padding: 24px 16px;
     max-width: 100%;
     overflow-x: scroll;
     width: auto;

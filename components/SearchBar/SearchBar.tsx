@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { IconButton } from '@chakra-ui/core'
 
 import { Route } from '../../routing/routes'
 
@@ -12,7 +11,7 @@ export const SearchBar = ({ fake, onSubmit }: Props) => {
     return (
       <Styled.HomeWrapper>
         <Link href={Route.search}>
-          <Styled.SearchContent>Find something for you <IconButton aria-label="Search database" icon="search" /></Styled.SearchContent>
+          <Styled.SearchContent>Find something for you</Styled.SearchContent>
         </Link>
       </Styled.HomeWrapper>
     )

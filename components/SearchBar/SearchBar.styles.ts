@@ -8,12 +8,11 @@ const HomeWrapper = styled.div`
 `
 
 const SearchContent = styled.a`
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 0 0 0 1rem;
+  padding: 1rem;
   border-radius: 2px;
   cursor: pointer;
 `
