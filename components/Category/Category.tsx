@@ -1,9 +1,15 @@
 import React from 'react'
 
-export const Category = () => {
-  return (
-    <div>
+import { Styled } from './Category.styles'
+import { Props } from './Category.types'
 
-    </div>
+export const Category = ({ category }: Props) => {
+  return (
+    <Styled.Wrapper>
+      <Styled.Content>
+        <Styled.IconContainer />
+        <Styled.CategoryDescription>{category.name}</Styled.CategoryDescription>
+      </Styled.Content>
+    </Styled.Wrapper>
   )
 }

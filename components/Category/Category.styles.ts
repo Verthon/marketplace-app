@@ -1,19 +1,22 @@
 import styled from '@emotion/styled'
+import { Theme } from 'styles/theme'
 
 const Wrapper = styled.li`
-  background-color: #FAFBF8;
+  background-color: transparent;
 `
 
 const Content = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `
 
 const IconContainer = styled.div`
-background-color: #002F34;
-height: 95px;
-width: 95px;
+  background-color: ${({ theme }: {theme: Theme}) => theme.colors.grey[200]};
+  height: 95px;
+  width: 95px;
+  border-radius: 25%;
 `
 
 const CategoryDescription = styled.p`

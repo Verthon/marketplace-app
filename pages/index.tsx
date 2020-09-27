@@ -1,11 +1,11 @@
 /* eslint-disable import/no-default-export */
 import React from 'react'
 import Head from 'next/head'
+import { CategoriesWrapperContainer } from 'components/CategoriesWrapper/CategoriesWrapperContainer'
 
 import { Navbar } from '../components/Navbar/Navbar'
 import { SearchBarContainer } from '../components/SearchBar/SearchBarContainer'
 import { MainWrapper } from '../components/MainWrapper/MainWrapper'
-import { CategoriesWrapper } from '../components/CategoriesWrapper/CategoriesWrapper'
 
 function Home () {
   return (
@@ -15,7 +15,7 @@ function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SearchBarContainer fake />
-      <CategoriesWrapper></CategoriesWrapper>
+      <CategoriesWrapperContainer/>
       <Navbar />
     </MainWrapper>
   )
