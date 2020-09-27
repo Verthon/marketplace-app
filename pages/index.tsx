@@ -2,6 +2,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { CategoriesWrapperContainer } from 'components/CategoriesWrapper/CategoriesWrapperContainer'
+import { AdvertContainer } from 'components/Advert/AdvertWrapper/AdvertContainer'
 
 import { Navbar } from '../components/Navbar/Navbar'
 import { SearchBarContainer } from '../components/SearchBar/SearchBarContainer'
@@ -16,6 +17,7 @@ function Home () {
       </Head>
       <SearchBarContainer fake />
       <CategoriesWrapperContainer/>
+      <AdvertContainer />
       <Navbar />
     </MainWrapper>
   )
