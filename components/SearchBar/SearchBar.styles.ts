@@ -7,6 +7,7 @@ const HomeWrapper = styled.div`
   top: 0;
   left: 0;
   background-color: ${({ theme }: { theme: Theme }) => theme.colors.grey[50]};
+  z-index: 1;
 `
 
 const SearchContent = styled.a`
