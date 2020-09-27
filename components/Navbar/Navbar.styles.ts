@@ -6,7 +6,8 @@ const Navbar = styled.nav`
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
+  background-color: #ffffff;
 `
 
 const NavItem = styled.span`
@@ -19,6 +20,7 @@ const NavItem = styled.span`
     width: 20px;
     height: 20px;
   }
+  cursor: pointer;
 `
 
 export const Styled = {
