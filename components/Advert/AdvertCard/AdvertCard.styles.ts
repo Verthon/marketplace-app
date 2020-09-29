@@ -5,7 +5,8 @@ const Wrapper = styled.li`
   display: flex;
   flex-direction: column;
   padding: 16px 0;
-  max-width: 50%;
+  width: calc(50% - 4px);
+  border-radius: 4px;
 `
 
 const AdvertLink = styled.a`
@@ -20,6 +21,7 @@ const InnerWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   position: relative;
+  height: 120px;
 `
 
 const Image = styled.img`
@@ -71,6 +73,18 @@ const Price = styled.p`
   text-overflow: ellipsis;
 `
 
+const Location = styled.p`
+  color: ${({ theme }: { theme: Theme }) => theme.colors.grey[600]};
+  font-size: 12px;
+  margin: 8px 0 0 0;
+`
+
+const Date = styled.p`
+  color: ${({ theme }: { theme: Theme }) => theme.colors.grey[600]};
+  font-size: 12px;
+  margin: 0 0 8px 0;
+`
+
 export const Styled = {
   Wrapper,
   AdvertLink,
@@ -80,5 +94,7 @@ export const Styled = {
   ImagePlaceholder,
   Content,
   Title,
-  Price
+  Price,
+  Location,
+  Date
 }
