@@ -5,8 +5,8 @@ import { CategoriesWrapper } from './CategoriesWrapper'
 
 export const CategoriesWrapperContainer = () => {
   const GET_CATEGORIES = gql`
-    query MyQuery {
-      categories {
+    query getCategories {
+      categories(order_by: {id: asc}) {
         big_image_url
         id
         image_url
