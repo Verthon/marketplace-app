@@ -4,7 +4,7 @@ import { Category } from 'components/Category/Category'
 import { Styled } from './CategoriesWrapper.styles'
 import { Props } from './CategoriesWrapper.types'
 
-export const CategoriesWrapper = ({ data }: Props) => {
+export const CategoriesWrapper = ({ categories }: Props) => {
   return (
     <Styled.Section>
       <Styled.Header>
@@ -15,7 +15,7 @@ export const CategoriesWrapper = ({ data }: Props) => {
       </Styled.Header>
       <Styled.ListWrapper>
         <Styled.List>
-          {data?.map(category => <Category key={category.id} category={category} />)}
+          {categories ? categories?.map(category => <Category key={category.id} category={category} />) : null}
         </Styled.List>
       </Styled.ListWrapper>
     </Styled.Section>

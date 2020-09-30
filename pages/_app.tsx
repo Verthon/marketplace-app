@@ -1,28 +1,25 @@
 /* eslint-disable import/no-default-export */
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
-import { Global, css } from '@emotion/core'
-import emotionNormalize from 'emotion-normalize'
+import { Global } from '@emotion/core'
+import { ApolloProvider } from '@apollo/client'
+import { globalStyles } from 'styles/global'
 
+import { useApollo } from '../lib/apolloClient'
 import { theme } from '../styles/theme'
 
-const myApp = ({ Component, pageProps }) => (
-  <ThemeProvider theme={theme}>
-    <Global
-      styles={css`
-        ${emotionNormalize}
-        html,
-    body {
-          padding: 0;
-          margin: 0;
-          background: white;
-          min-height: 100%;
-          font-family: Helvetica, Arial, sans-serif;
-        }
-      `}
-    />
-    <Component {...pageProps} />
-  </ThemeProvider>
-)
+const myApp = ({ Component, pageProps }) => {
+  const apolloClient = useApollo(pageProps.initialApolloState)
+  return (
+    <ApolloProvider client={apolloClient}>
+      <ThemeProvider theme={theme}>
+        <Global
+          styles={globalStyles}
+        />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </ApolloProvider>
+  )
+}
 
 export default myApp

@@ -1,3 +1,7 @@
+import { css } from '@emotion/core'
+import emotionNormalize from 'emotion-normalize'
+
+export const globalStyles = css`
 html,
 body {
   padding: 0;
@@ -14,3 +18,5 @@ a {
 * {
   box-sizing: border-box;
 }
+${emotionNormalize}
+`
