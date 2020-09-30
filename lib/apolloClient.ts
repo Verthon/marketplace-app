@@ -1,14 +1,16 @@
 import { useMemo } from 'react'
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
 import { concatPagination } from '@apollo/client/utilities'
+import { endpoint } from 'config'
 
 let apolloClient
 
 function createApolloClient () {
+  console.log(process.env)
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: process.env.API_URL, // Server URL (must be absolute)
+      uri: endpoint, // Server URL (must be absolute)
       credentials: 'same-origin' // Additional fetch() options like `credentials` or `headers`
     }),
     cache: new InMemoryCache({
