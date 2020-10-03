@@ -1,9 +1,12 @@
 import styled from '@emotion/styled'
 import { Theme } from 'styles/theme'
 
-const Wrapper = styled.main`
+const Wrapper = styled.div`
+  display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    min-height: calc( (var(--vh,1vh) * 100) - 0px );
   position: relative;
-  height: 100vh;
   background-color: ${({ theme }: { theme: Theme }) => theme.colors.grey[50]};
   padding: 0 16px;
 `
@@ -11,6 +14,14 @@ const Wrapper = styled.main`
 const InputWrapper = styled.div`
   margin: 16px 0 0 0;
  position: relative;
+`
+
+const BackIcon = styled.img`
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: -12px 0 0 12px;
+  top: 50%;
 `
 
 const Input = styled.input`
@@ -24,5 +35,6 @@ const Input = styled.input`
 export const Styled = {
   Wrapper,
   InputWrapper,
-  Input
+  Input,
+  BackIcon
 }
