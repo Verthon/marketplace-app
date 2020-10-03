@@ -15,6 +15,7 @@ const SearchContent = styled.a`
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
+  color: ${({ theme }: { theme: Theme }) => theme.colors.grey[600]};
   padding: 1rem;
   border-radius: 2px;
   cursor: pointer;
