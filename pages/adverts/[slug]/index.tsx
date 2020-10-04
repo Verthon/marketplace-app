@@ -1,23 +1,21 @@
 /* eslint-disable import/no-default-export */
 import React from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { MainWrapper } from 'components/MainWrapper/MainWrapper'
 import { Navbar } from 'components/Navbar/Navbar'
+import { AdvertPageContainer } from 'components/Advert/AdvertPage/AdvertPageContainer'
 
-function Home () {
-  const router = useRouter()
-  const { id } = router.query
+function Advert () {
   return (
     <MainWrapper>
       <Head>
         <title>Mrkt</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Test id: {id}</h1>
+      <AdvertPageContainer/>
       <Navbar />
     </MainWrapper>
   )
 }
 
-export default Home
+export default Advert

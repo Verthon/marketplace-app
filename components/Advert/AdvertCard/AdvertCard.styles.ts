@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 import { Theme } from 'styles/theme'
 
 const Wrapper = styled.li`
@@ -7,9 +8,10 @@ const Wrapper = styled.li`
   padding: 16px 0;
   width: calc(50% - 4px);
   border-radius: 4px;
+  cursor: pointer;
 `
 
-const AdvertLink = styled.a`
+const AdvertLink = styled(Link)`
   display: block;
 `
 

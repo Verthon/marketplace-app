@@ -5,16 +5,15 @@ import { Styled } from './AdvertCard.styles'
 import { Props } from './AdvertCard.types'
 
 export const AdvertCard = ({ advert }: Props) => {
+  const hasNoImages = !advert.images || advert.images.length
+  const href = advert.id ? `/adverts/${advert.id}` : '/'
+
   return (
     <Styled.Wrapper>
-      <Styled.AdvertLink>
+      <Styled.AdvertLink href={href}>
         <Styled.InnerWrapper>
           <Styled.ImageWrapper>
-            {!advert.images || advert.images.length === 0 ? (
-              <Styled.ImagePlaceholder />
-            ) : (
-              <Styled.Image src={advert.images[0]} />
-            )}
+            {hasNoImages ? <Styled.ImagePlaceholder /> : <Styled.Image src={advert.images[0]} />}
           </Styled.ImageWrapper>
           <Styled.Content>
             <div>
